@@ -1,13 +1,13 @@
 	<div class="row-fluid">
 			
-    @if (sizeof($this->getLocations()) > 1)
+
 					
 	<div class="list-filter" id="filter-list-filter">
 		
 	    <form id="filter-form" class="form-inline" accept-charset="utf-8" method="GET" action="<?= admin_url('thoughtco/reports/dashboard'); ?>" role="form">
 		    	
 	        <div class="d-sm-flex flex-sm-wrap w-100 no-gutters">
-		        
+		      @if (sizeof($this->getLocations()) > 1)
 				<div class="col-sm-3 pr-5">
 					
 					<div class="filter-scope form-group">
@@ -22,7 +22,7 @@
             		</div>
             		
 		        </div>	 
-		        
+		      @endif
 				<div class="col-sm-2 pr-5">
 					
 					<div class="filter-scope date form-group">
@@ -77,7 +77,7 @@
 		</form>
 		
 	</div>
-	@endif	 
+		 
         
 	<div class="row mx-1">
 			
